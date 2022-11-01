@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DokkanPassiveGenerator.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,20 @@ namespace DokkanPassiveGenerator
 
         private void createPassiveButton_Click(object sender, EventArgs e)
         {
-
+            CreatePassive CreateForm = new CreatePassive();
+            CreateForm.Show();
         }
 
         private void usePassiveButton_Click(object sender, EventArgs e)
         {
-
+            UsePassive UseForm = new UsePassive();
+            UseForm.Show();
         }
 
         private void managePassiveButton_Click(object sender, EventArgs e)
         {
-
+            PassiveManager Manager = new PassiveManager();
+            Manager.Show();
         }
     }
 }
