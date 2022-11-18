@@ -1,0 +1,17 @@
+{
+  "userPassives": "Storage for passives",
+  "members": [
+    {
+      "CardName": "Test",
+      "HP": 10000,
+      "ATK": 20000,
+      "DEF": 13000,
+      "LeaderSkillName": "TestName",
+      "LeaderSkillBuff": 200,
+      "PassiveATK": 100,
+      "PassiveDEF": 100,
+      "Support": 30,
+      "Error": null
+    }
+  ]
+}
