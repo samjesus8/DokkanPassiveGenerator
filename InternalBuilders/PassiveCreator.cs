@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace DokkanPassiveGenerator.InternalBuilders
 {
@@ -68,14 +65,14 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
     class Member 
     {
-        public string name { get; set; }
-        public int hp { get; set; }
-        public int atk { get; set; }
-        public int def { get; set; }
-        public string leaderName { get; set; }
-        public int leaderValue { get; set; }
-        public int passiveATK { get; set; }
-        public int passiveDEF { get; set;}
-        public int support { get; set; }
+        public string CardName { get; set; }
+        public int HP { get; set; }
+        public int ATK { get; set; }
+        public int DEF { get; set; }
+        public string LeaderSkillName { get; set; }
+        public int LeaderSkillBuff { get; set; }
+        public int PassiveATK { get; set; }
+        public int PassiveDEF { get; set; }
+        public int Support { get; set; }
     }
 }

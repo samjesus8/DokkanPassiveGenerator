@@ -82,7 +82,9 @@
     <Compile Include="Forms\UsePassive.Designer.cs">
       <DependentUpon>UsePassive.cs</DependentUpon>
     </Compile>
+    <Compile Include="InternalBuilders\Calculator.cs" />
     <Compile Include="InternalBuilders\PassiveCreator.cs" />
+    <Compile Include="InternalBuilders\PassiveStorage.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

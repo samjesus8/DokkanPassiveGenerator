@@ -12,6 +12,30 @@
       "PassiveDEF": 100,
       "Support": 30,
       "Error": null
+    },
+    {
+      "CardName": "LR AGL SSJ4 Goku",
+      "HP": 22988,
+      "ATK": 21720,
+      "DEF": 12931,
+      "LeaderSkillName": "Goku's Family",
+      "LeaderSkillBuff": 180,
+      "PassiveATK": 200,
+      "PassiveDEF": 200,
+      "Support": 30,
+      "Error": null
+    },
+    {
+      "CardName": "STR Gofrieza",
+      "HP": 13859,
+      "ATK": 14187,
+      "DEF": 9947,
+      "LeaderSkillName": "Battle of Wits",
+      "LeaderSkillBuff": 170,
+      "PassiveATK": 120,
+      "PassiveDEF": 120,
+      "Support": 20,
+      "Error": null
     }
   ]
 }
