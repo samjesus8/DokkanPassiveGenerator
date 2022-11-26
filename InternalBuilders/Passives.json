@@ -2,39 +2,29 @@
   "userPassives": "Storage for passives",
   "members": [
     {
-      "CardName": "Test",
-      "HP": 10000,
-      "ATK": 20000,
-      "DEF": 13000,
-      "LeaderSkillName": "TestName",
-      "LeaderSkillBuff": 200,
-      "PassiveATK": 100,
-      "PassiveDEF": 100,
-      "Support": 30,
-      "Error": null
-    },
-    {
-      "CardName": "LR AGL SSJ4 Goku",
-      "HP": 22988,
-      "ATK": 21720,
-      "DEF": 12931,
-      "LeaderSkillName": "Goku's Family",
-      "LeaderSkillBuff": 180,
-      "PassiveATK": 200,
-      "PassiveDEF": 200,
-      "Support": 30,
-      "Error": null
-    },
-    {
-      "CardName": "STR Gofrieza",
-      "HP": 13859,
-      "ATK": 14187,
-      "DEF": 9947,
-      "LeaderSkillName": "Battle of Wits",
+      "CardName": "STR UI Goku",
+      "Rarity": "LR",
+      "HP": 20838,
+      "ATK": 22800,
+      "DEF": 12556,
+      "LeaderSkillName": "Realm Of Gods",
       "LeaderSkillBuff": 170,
-      "PassiveATK": 120,
-      "PassiveDEF": 120,
+      "PassiveATK": 154,
+      "PassiveDEF": 154,
       "Support": 20,
+      "Error": null
+    },
+    {
+      "CardName": "AGL Gamma 2",
+      "Rarity": "TUR",
+      "HP": 17675,
+      "ATK": 15170,
+      "DEF": 13275,
+      "LeaderSkillName": "Androids",
+      "LeaderSkillBuff": 200,
+      "PassiveATK": 350,
+      "PassiveDEF": 300,
+      "Support": 30,
       "Error": null
     }
   ]

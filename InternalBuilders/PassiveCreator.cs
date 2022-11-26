@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +8,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
     public class PassiveCreator
     {
         public string CardName { get; set; }
+        public string Rarity { get; set; }
         public int HP { get; set; }
         public int ATK { get; set; }
         public int DEF { get; set; }
@@ -20,9 +20,10 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public string Error { get; set; }
 
-        public PassiveCreator(string cardName, int hp, int atk, int def, string leaderName, int leaderValue, int passiveATK, int passiveDEF, int support) 
+        public PassiveCreator(string cardName, string rarity, int hp, int atk, int def, string leaderName, int leaderValue, int passiveATK, int passiveDEF, int support) 
         {
             this.CardName = cardName;
+            this.Rarity = rarity;
             this.HP = hp;
             this.ATK = atk;
             this.DEF = def;
@@ -35,7 +36,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public PassiveCreator() { }
 
-        public void StorePassive(PassiveCreator classObj) 
+        public bool StorePassive(PassiveCreator classObj) 
         {
             try 
             {
@@ -49,10 +50,12 @@ namespace DokkanPassiveGenerator.InternalBuilders
                 jsonObj["members"] = JArray.FromObject(members);
 
                 File.WriteAllText(path, jsonObj.ToString());
+                return true;
             }
             catch (Exception ex) 
             {
                 Error = ex.Message;
+                return false;
             }
         }
     }
@@ -66,6 +69,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
     class Member 
     {
         public string CardName { get; set; }
+        public string Rarity { get; set; }
         public int HP { get; set; }
         public int ATK { get; set; }
         public int DEF { get; set; }

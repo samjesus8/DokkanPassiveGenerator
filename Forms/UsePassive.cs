@@ -19,21 +19,31 @@ namespace DokkanPassiveGenerator.Forms
             var passiveName = passiveSelectorBox.SelectedItem.ToString();
             var tempVaribale = storage.Passives.TryGetValue(passiveName, out var info);
 
-            var calculator = new Calculator(info.HP, info.ATK, info.DEF, info.LeaderSkillBuff, info.PassiveATK, info.PassiveDEF, info.Support);
+            var calculator = new Calculator(info.Rarity, info.HP, info.ATK, info.DEF, info.LeaderSkillBuff, info.PassiveATK, info.PassiveDEF, info.Support);
 
             string output = "Stats for unit " + info.CardName + "\r\n\r\n" +
-                            calculator.ResultATK;
+                            calculator.ResultATK + "\r\n\r\n" +
+                            calculator.ResultDEF;
 
             passiveOutputBox.Text = output;
         }
 
         private void UsePassive_Load(object sender, EventArgs e)
         {
-            storage.LoadPassives();
-
-            foreach (var member in storage.Passives) 
+            bool loadProcess = storage.LoadPassives();
+            if (loadProcess == true) 
             {
-                passiveSelectorBox.Items.Add(member.Value.CardName);
+                foreach (var member in storage.Passives)
+                {
+                    passiveSelectorBox.Items.Add(member.Value.CardName);
+                }
+            }
+            else 
+            {
+                //Error Message
+                string errorMsg = "Something went wrong \r\n" +
+                                  "Error: " + storage.Error;
+                MessageBox.Show(errorMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -44,8 +54,9 @@ namespace DokkanPassiveGenerator.Forms
             {
                 var tempSearch = storage.Passives.TryGetValue(nameToSearch, out var info);
 
-                string output = "Passive Details: \r\n" +
+                string output = "Passive Details: \r\n\r\n" +
                                 "Card Name: " + info.CardName + "\r\n" +
+                                "Rarity: " + info.Rarity + "\r\n" +
                                 "HP: " + info.HP + "\r\n" +
                                 "ATK: " + info.ATK + "\r\n" +
                                 "DEF: " + info.DEF + "\r\n" +

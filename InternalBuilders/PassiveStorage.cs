@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DokkanPassiveGenerator.InternalBuilders
 {
@@ -13,7 +10,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
         public Dictionary<string, PassiveCreator> Passives = new Dictionary<string, PassiveCreator>();
         public string Error { get; set; }
 
-        public void LoadPassives()
+        public bool LoadPassives()
         {
             try
             {
@@ -29,6 +26,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
                         var classObj = new PassiveCreator();
 
                         classObj.CardName = member.CardName;
+                        classObj.Rarity = member.Rarity;
                         classObj.HP = member.HP;
                         classObj.ATK = member.ATK;
                         classObj.DEF = member.DEF;
@@ -41,8 +39,13 @@ namespace DokkanPassiveGenerator.InternalBuilders
                         Passives.Add(classObj.CardName, classObj);
                     }
                 }
+                return true;
             }
-            catch (Exception ex) { Error = ex.Message; }
+            catch (Exception ex) 
+            {
+                Error = ex.Message; 
+                return false;
+            }
         }
     }
 
