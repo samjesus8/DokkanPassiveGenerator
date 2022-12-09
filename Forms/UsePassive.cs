@@ -19,7 +19,7 @@ namespace DokkanPassiveGenerator.Forms
             var passiveName = passiveSelectorBox.SelectedItem.ToString();
             var tempVaribale = storage.Passives.TryGetValue(passiveName, out var info);
 
-            var calculator = new Calculator(info.Rarity, info.HP, info.ATK, info.DEF, info.LeaderSkillBuff, info.PassiveATK, info.PassiveDEF, info.Support);
+            var calculator = new Calculator(info.Rarity, info.HP, info.ATK, info.DEF, info.LeaderSkillBuff, info.PassiveATK, info.PassiveDEF, info.Support, info.Links);
 
             string output = "Stats for unit " + info.CardName + "\r\n\r\n" +
                             calculator.ResultATK + "\r\n\r\n" +
@@ -65,7 +65,8 @@ namespace DokkanPassiveGenerator.Forms
                                 "Passive ATK: " + info.PassiveATK + "\r\n" +
                                 "Passive DEF: " + info.PassiveDEF + "\r\n" +
                                 "Optional Buffs \r\n" +
-                                "Support: " + info.Support + "\r\n";
+                                "Support: " + info.Support + "\r\n" +
+                                "Links: " + string.Join(", ", info.Links);
 
                 passiveDetailsBox.Text = output;
             }

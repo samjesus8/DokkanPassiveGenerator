@@ -17,10 +17,11 @@ namespace DokkanPassiveGenerator.InternalBuilders
         public int PassiveATK { get; set; }
         public int PassiveDEF { get; set; }
         public int Support { get; set; }
+        public string[] Links { get; set; }
 
         public string Error { get; set; }
 
-        public PassiveCreator(string cardName, string rarity, int hp, int atk, int def, string leaderName, int leaderValue, int passiveATK, int passiveDEF, int support) 
+        public PassiveCreator(string cardName, string rarity, int hp, int atk, int def, string leaderName, int leaderValue, int passiveATK, int passiveDEF, int support, string[] links) 
         {
             this.CardName = cardName;
             this.Rarity = rarity;
@@ -32,6 +33,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
             this.PassiveATK = passiveATK;
             this.PassiveDEF = passiveDEF;
             this.Support = support;
+            this.Links = links;
         }
 
         public PassiveCreator() { }
@@ -78,5 +80,6 @@ namespace DokkanPassiveGenerator.InternalBuilders
         public int PassiveATK { get; set; }
         public int PassiveDEF { get; set; }
         public int Support { get; set; }
+        public string[] Links { get; set; }
     }
 }

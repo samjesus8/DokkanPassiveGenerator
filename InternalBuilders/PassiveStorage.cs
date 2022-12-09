@@ -35,6 +35,7 @@ namespace DokkanPassiveGenerator.InternalBuilders
                         classObj.PassiveATK = member.PassiveATK;
                         classObj.PassiveDEF = member.PassiveDEF;
                         classObj.Support = member.Support;
+                        classObj.Links = member.Links;
 
                         Passives.Add(classObj.CardName, classObj);
                     }

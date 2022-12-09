@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePassive));
             this.label1 = new System.Windows.Forms.Label();
             this.inputGroupBox = new System.Windows.Forms.GroupBox();
+            this.rarityBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.supportBox = new System.Windows.Forms.TextBox();
@@ -55,8 +57,7 @@
             this.declineButton = new System.Windows.Forms.Button();
             this.acceptButton = new System.Windows.Forms.Button();
             this.outputBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.rarityBox = new System.Windows.Forms.ComboBox();
+            this.linkSelector = new System.Windows.Forms.CheckedListBox();
             this.inputGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // inputGroupBox
             // 
+            this.inputGroupBox.Controls.Add(this.linkSelector);
             this.inputGroupBox.Controls.Add(this.rarityBox);
             this.inputGroupBox.Controls.Add(this.label12);
             this.inputGroupBox.Controls.Add(this.createButton);
@@ -102,6 +104,28 @@
             this.inputGroupBox.TabStop = false;
             this.inputGroupBox.Text = "User Input";
             // 
+            // rarityBox
+            // 
+            this.rarityBox.FormattingEnabled = true;
+            this.rarityBox.Items.AddRange(new object[] {
+            "TUR",
+            "LR",
+            "TUR (EZA)",
+            "LR (EZA)"});
+            this.rarityBox.Location = new System.Drawing.Point(5, 109);
+            this.rarityBox.Name = "rarityBox";
+            this.rarityBox.Size = new System.Drawing.Size(100, 21);
+            this.rarityBox.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(2, 93);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Rarity";
+            // 
             // createButton
             // 
             this.createButton.Location = new System.Drawing.Point(297, 472);
@@ -115,7 +139,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(235, 93);
+            this.label11.Location = new System.Drawing.Point(186, 156);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 13);
             this.label11.TabIndex = 18;
@@ -307,27 +331,16 @@
             this.outputBox.Size = new System.Drawing.Size(393, 447);
             this.outputBox.TabIndex = 0;
             // 
-            // label12
+            // linkSelector
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(2, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Rarity";
-            // 
-            // rarityBox
-            // 
-            this.rarityBox.FormattingEnabled = true;
-            this.rarityBox.Items.AddRange(new object[] {
-            "TUR",
-            "LR",
-            "TUR (EZA)",
-            "LR (EZA)"});
-            this.rarityBox.Location = new System.Drawing.Point(5, 109);
-            this.rarityBox.Name = "rarityBox";
-            this.rarityBox.Size = new System.Drawing.Size(100, 21);
-            this.rarityBox.TabIndex = 20;
+            this.linkSelector.CheckOnClick = true;
+            this.linkSelector.FormattingEnabled = true;
+            this.linkSelector.Location = new System.Drawing.Point(189, 172);
+            this.linkSelector.Name = "linkSelector";
+            this.linkSelector.ScrollAlwaysVisible = true;
+            this.linkSelector.Size = new System.Drawing.Size(183, 199);
+            this.linkSelector.Sorted = true;
+            this.linkSelector.TabIndex = 21;
             // 
             // CreatePassive
             // 
@@ -342,6 +355,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreatePassive";
             this.Text = "CreatePassive";
+            this.Load += new System.EventHandler(this.CreatePassive_Load);
             this.inputGroupBox.ResumeLayout(false);
             this.inputGroupBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -381,5 +395,6 @@
         private System.Windows.Forms.Button acceptButton;
         private System.Windows.Forms.ComboBox rarityBox;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckedListBox linkSelector;
     }
 }

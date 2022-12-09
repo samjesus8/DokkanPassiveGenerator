@@ -1,5 +1,6 @@
 ﻿using DokkanPassiveGenerator.InternalBuilders;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DokkanPassiveGenerator.Forms
@@ -23,6 +24,13 @@ namespace DokkanPassiveGenerator.Forms
             }
             else 
             {
+                string[] tempLinks = new string[linkSelector.CheckedItems.Count];
+                for(int i = 0; i < linkSelector.CheckedItems.Count; i++) 
+                {
+                    string linkName = linkSelector.CheckedItems[i].ToString();
+                    tempLinks[i] = linkName;
+                }
+
                 //Parsing all the user input into the class
 
                 passiveEngine.CardName = cardNameBox.Text;
@@ -35,6 +43,8 @@ namespace DokkanPassiveGenerator.Forms
                 passiveEngine.PassiveATK = int.Parse(passiveATKBox.Text);
                 passiveEngine.PassiveDEF = int.Parse(passiveDEFBox.Text);
                 passiveEngine.Support = int.Parse(supportBox.Text);
+                passiveEngine.Links = tempLinks;
+
 
                 string output = "Passive Details: \r\n" +
                                 "Card Name: " + passiveEngine.CardName + "\r\n" +
@@ -47,7 +57,8 @@ namespace DokkanPassiveGenerator.Forms
                                 "Passive ATK: " + passiveEngine.PassiveATK + "\r\n" +
                                 "Passive DEF: " + passiveEngine.PassiveDEF + "\r\n" +
                                 "Optional Buffs \r\n" +
-                                "Support: " + passiveEngine.Support + "\r\n";
+                                "Support: " + passiveEngine.Support + "\r\n" +
+                                "Links: " + string.Join(", " , tempLinks);
 
                 outputBox.Text = output;
             }
@@ -73,6 +84,25 @@ namespace DokkanPassiveGenerator.Forms
         private void declineButton_Click(object sender, EventArgs e)
         {
             outputBox.Clear();
+        }
+
+        private void CreatePassive_Load(object sender, EventArgs e)
+        {
+            var LinkStorage = new LinksLoad(); //Loads the Link Dictionary
+            bool linkProcess = LinkStorage.LoadLinks();
+
+            if (linkProcess == true) 
+            {
+                foreach (var Link in LinkStorage.Links)
+                {
+                    linkSelector.Items.Add(Link.Key);
+                }
+            }
+
+            else 
+            {
+                MessageBox.Show("Links Failed to load", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

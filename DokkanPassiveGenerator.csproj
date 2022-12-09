@@ -83,6 +83,8 @@
       <DependentUpon>UsePassive.cs</DependentUpon>
     </Compile>
     <Compile Include="InternalBuilders\Calculator.cs" />
+    <Compile Include="InternalBuilders\LinksLoad.cs" />
+    <Compile Include="InternalBuilders\LinkStorage.cs" />
     <Compile Include="InternalBuilders\PassiveCreator.cs" />
     <Compile Include="InternalBuilders\PassiveStorage.cs" />
     <Compile Include="Main.cs">
@@ -115,6 +117,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Help\CreatingPassive.md" />
+    <None Include="InternalBuilders\Links.json" />
     <None Include="InternalBuilders\Passives.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

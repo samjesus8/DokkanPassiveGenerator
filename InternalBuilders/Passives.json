@@ -2,29 +2,66 @@
   "userPassives": "Storage for passives",
   "members": [
     {
-      "CardName": "STR UI Goku",
+      "CardName": "TEQ Broly",
       "Rarity": "LR",
-      "HP": 20838,
-      "ATK": 22800,
-      "DEF": 12556,
-      "LeaderSkillName": "Realm Of Gods",
+      "HP": 24688,
+      "ATK": 20845,
+      "DEF": 13275,
+      "LeaderSkillName": "Resurrected Warriors",
       "LeaderSkillBuff": 170,
-      "PassiveATK": 154,
-      "PassiveDEF": 154,
+      "PassiveATK": 140,
+      "PassiveDEF": 90,
       "Support": 20,
+      "Links": [
+        "Beserker",
+        "FierceBattle",
+        "LegendaryPower",
+        "PreparedForBattle",
+        "SaiyanLineage",
+        "SaiyanWarriorRace",
+        "SuperSaiyan"
+      ],
       "Error": null
     },
     {
-      "CardName": "AGL Gamma 2",
+      "CardName": "INT 3rd Form Frieza",
       "Rarity": "TUR",
-      "HP": 17675,
-      "ATK": 15170,
-      "DEF": 13275,
-      "LeaderSkillName": "Androids",
+      "HP": 13553,
+      "ATK": 14414,
+      "DEF": 9732,
+      "LeaderSkillName": "Sworn Enemies",
+      "LeaderSkillBuff": 170,
+      "PassiveATK": 140,
+      "PassiveDEF": 140,
+      "Support": 40,
+      "Links": [
+        "BigBadBosses",
+        "BrutalBeatdown",
+        "FierceBattle",
+        "Prodigies",
+        "ShockingSpeed",
+        "UniversesMostMalevolent"
+      ],
+      "Error": null
+    },
+    {
+      "CardName": "PHY Metal Cooler",
+      "Rarity": "LR",
+      "HP": 22513,
+      "ATK": 21210,
+      "DEF": 13406,
+      "LeaderSkillName": "Wicked Bloodline",
       "LeaderSkillBuff": 200,
-      "PassiveATK": 350,
-      "PassiveDEF": 300,
-      "Support": 30,
+      "PassiveATK": 190,
+      "PassiveDEF": 290,
+      "Support": 40,
+      "Links": [
+        "BigBadBosses",
+        "FierceBattle",
+        "LegendaryPower",
+        "Nightmare",
+        "ThirstForConquest"
+      ],
       "Error": null
     }
   ]
