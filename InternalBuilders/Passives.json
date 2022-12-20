@@ -24,27 +24,6 @@
       "Error": null
     },
     {
-      "CardName": "INT 3rd Form Frieza",
-      "Rarity": "TUR",
-      "HP": 13553,
-      "ATK": 14414,
-      "DEF": 9732,
-      "LeaderSkillName": "Sworn Enemies",
-      "LeaderSkillBuff": 170,
-      "PassiveATK": 140,
-      "PassiveDEF": 140,
-      "Support": 40,
-      "Links": [
-        "BigBadBosses",
-        "BrutalBeatdown",
-        "FierceBattle",
-        "Prodigies",
-        "ShockingSpeed",
-        "UniversesMostMalevolent"
-      ],
-      "Error": null
-    },
-    {
       "CardName": "PHY Metal Cooler",
       "Rarity": "LR",
       "HP": 22513,

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DokkanPassiveGenerator.InternalBuilders
 {
@@ -55,6 +56,37 @@ namespace DokkanPassiveGenerator.InternalBuilders
                 return true;
             }
             catch (Exception ex) 
+            {
+                Error = ex.Message;
+                return false;
+            }
+        }
+
+        public bool DeletePassive(PassiveCreator classObj) 
+        {
+            try 
+            {
+                var path = @"D:\Visual Studio Projects\DokkanPassiveGenerator\InternalBuilders\Passives.json";
+                var json = File.ReadAllText(path);
+
+                var jsonObj = JObject.Parse(json);
+                var members = jsonObj["members"].ToObject<List<PassiveCreator>>();
+
+                var search = members.FirstOrDefault(m => m.CardName == classObj.CardName);
+                if (search != null)
+                {
+                    members.Remove(search);
+
+                    jsonObj["members"] = JArray.FromObject(members);
+                    File.WriteAllText(path, jsonObj.ToString());
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch(Exception ex) 
             {
                 Error = ex.Message;
                 return false;

@@ -1,6 +1,5 @@
 ﻿using DokkanPassiveGenerator.InternalBuilders;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace DokkanPassiveGenerator.Forms
