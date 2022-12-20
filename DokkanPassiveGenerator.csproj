@@ -83,10 +83,10 @@
       <DependentUpon>UsePassive.cs</DependentUpon>
     </Compile>
     <Compile Include="InternalBuilders\Calculator.cs" />
-    <Compile Include="InternalBuilders\LinksLoad.cs" />
-    <Compile Include="InternalBuilders\LinkStorage.cs" />
-    <Compile Include="InternalBuilders\PassiveCreator.cs" />
-    <Compile Include="InternalBuilders\PassiveStorage.cs" />
+    <Compile Include="InternalBuilders\Link System\LinksLoad.cs" />
+    <Compile Include="InternalBuilders\Link System\LinkStorage.cs" />
+    <Compile Include="InternalBuilders\Passive Storing System\PassiveCreator.cs" />
+    <Compile Include="InternalBuilders\Passive Storing System\PassiveStorage.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Help\CreatingPassive.md" />
     <None Include="InternalBuilders\Links.json" />
@@ -144,6 +145,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpapersden.com_goku-new-dragon-ball-z-art_ws.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4545965.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goku-dragon-ball-super-ultra-instinct-b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpapersden.com_ultra-goku-cool-2020-minimal_3840x2160.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
