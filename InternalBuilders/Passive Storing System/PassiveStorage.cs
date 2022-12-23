@@ -12,9 +12,12 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public bool LoadPassives()
         {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
             try
             {
-                using (StreamReader sr = new StreamReader(@"D:\Visual Studio Projects\DokkanPassiveGenerator\InternalBuilders\Passives.json"))
+                using (StreamReader sr = new StreamReader(docsLocation + "/Passives.json"))
                 {
                     string jsonFile = sr.ReadToEnd();
                     JSONObject jsonObject = JsonConvert.DeserializeObject<JSONObject>(jsonFile);

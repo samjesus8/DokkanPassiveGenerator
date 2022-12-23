@@ -125,6 +125,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Dokkan Passive Generator";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

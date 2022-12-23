@@ -1,12 +1,6 @@
 ﻿using DokkanPassiveGenerator.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace DokkanPassiveGenerator
@@ -34,6 +28,33 @@ namespace DokkanPassiveGenerator
         {
             PassiveManager Manager = new PassiveManager();
             Manager.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
+            if (!Directory.Exists(docsLocation)) 
+            {
+                LoadFiles();
+            }
+        }
+
+        private string LoadFiles() 
+        {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
+            if (!Directory.Exists(docsLocation)) 
+            {
+                Directory.CreateDirectory(docsLocation);
+            }
+
+            File.Copy(System.AppDomain.CurrentDomain.BaseDirectory + "/InternalBuilders/Links.json", docsLocation + "/Links.json", false);
+            File.Copy(System.AppDomain.CurrentDomain.BaseDirectory + "/InternalBuilders/Passives.json", docsLocation + "/Passives.json", false);
+
+            return docsLocation;
         }
     }
 }

@@ -118,8 +118,12 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Help\CreatingPassive.md" />
-    <None Include="InternalBuilders\Links.json" />
-    <None Include="InternalBuilders\Passives.json" />
+    <Content Include="InternalBuilders\Links.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InternalBuilders\Passives.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

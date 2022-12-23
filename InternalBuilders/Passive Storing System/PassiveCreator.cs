@@ -41,9 +41,12 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public bool StorePassive(PassiveCreator classObj) 
         {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
             try 
             {
-                var path = @"D:\Visual Studio Projects\DokkanPassiveGenerator\InternalBuilders\Passives.json";
+                var path = docsLocation + "/Passives.json";
                 var json = File.ReadAllText(path);
 
                 var jsonObj = JObject.Parse(json);
@@ -64,9 +67,12 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public bool DeletePassive(PassiveCreator classObj) 
         {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
             try 
             {
-                var path = @"D:\Visual Studio Projects\DokkanPassiveGenerator\InternalBuilders\Passives.json";
+                var path = docsLocation + "/Passives.json";
                 var json = File.ReadAllText(path);
 
                 var jsonObj = JObject.Parse(json);

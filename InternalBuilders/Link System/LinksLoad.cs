@@ -19,9 +19,12 @@ namespace DokkanPassiveGenerator.InternalBuilders
 
         public bool LoadLinks() 
         {
+            string myDocsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string docsLocation = Path.Combine(myDocsPath, "Passive Generator Files");
+
             try 
             {
-                using (StreamReader sr = new StreamReader(@"D:\Visual Studio Projects\DokkanPassiveGenerator\InternalBuilders\Links.json"))
+                using (StreamReader sr = new StreamReader(docsLocation + "/Links.json"))
                 {
                     string json = sr.ReadToEnd();
                     JSONObjectLinks obj = JsonConvert.DeserializeObject<JSONObjectLinks>(json);
