@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Changelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Changelog.Designer.cs">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CreatePassive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\4446869.jpg" />
+    <EmbeddedResource Include="Forms\Changelog.resx">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreatePassive.resx">
       <DependentUpon>CreatePassive.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,12 +159,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wallpapersden.com_goku-new-dragon-ball-z-art_ws.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4545965.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\goku-dragon-ball-super-ultra-instinct-b3.jpg" />

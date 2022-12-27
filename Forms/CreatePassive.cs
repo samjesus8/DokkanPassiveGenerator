@@ -15,11 +15,17 @@ namespace DokkanPassiveGenerator.Forms
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            bool sameNameCheck = CheckSameName(cardNameBox.Text);
+
             if(cardNameBox.Text == "" || hpBox.Text == "" || atkBox.Text == "" || defBox.Text == "" ||
                    leaderNameBox.Text == "" || leaderBuffBox.Text == "" || passiveATKBox.Text == "" ||
                         passiveDEFBox.Text == "" || supportBox.Text == "") 
             {
-                MessageBox.Show("You need to fill out all the boxes!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You need to fill out all the required inputs before pressing this button", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(sameNameCheck == false) 
+            {
+                MessageBox.Show("A Passive with the same name alerady exists. Please enter a different name for the Card Name input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else 
             {
@@ -65,18 +71,33 @@ namespace DokkanPassiveGenerator.Forms
 
         private void acceptButton_Click(object sender, EventArgs e)
         {
-            bool storeProcess = passiveEngine.StorePassive(passiveEngine);
-            if (storeProcess == true) 
+            bool sameNameCheck = CheckSameName(cardNameBox.Text);
+
+            if (cardNameBox.Text == "" || hpBox.Text == "" || atkBox.Text == "" || defBox.Text == "" ||
+                leaderNameBox.Text == "" || leaderBuffBox.Text == "" || passiveATKBox.Text == "" ||
+                passiveDEFBox.Text == "" || supportBox.Text == "")
             {
-                //Success Message
-                MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You need to fill out all the required inputs before pressing this button", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (sameNameCheck == false) 
+            {
+                MessageBox.Show("A Passive with the same name alerady exists. Please enter a different name for the Card Name input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else 
             {
-                //Error Message
-                string errorMsg = "Something went wrong \r\n" +
-                                  "Error: " + passiveEngine.Error;
-                MessageBox.Show(errorMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                bool storeProcess = passiveEngine.StorePassive(passiveEngine);
+                if (storeProcess == true)
+                {
+                    //Success Message
+                    MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //Error Message
+                    string errorMsg = "Something went wrong \r\n" +
+                                      "Error: " + passiveEngine.Error;
+                    MessageBox.Show(errorMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -102,6 +123,26 @@ namespace DokkanPassiveGenerator.Forms
             {
                 MessageBox.Show("Links Failed to load", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool CheckSameName(string name) 
+        {
+            var passivesStorage = new PassiveStorage();
+            passivesStorage.LoadPassives();
+
+            foreach (var nameToCheck in passivesStorage.Passives) 
+            {
+                if (name == nameToCheck.Value.CardName) 
+                {
+                    return false;
+                }
+                else 
+                {
+                    return true;
+                }
+            }
+
+            return true;
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsePassive));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loadPassiveButton = new System.Windows.Forms.Button();
             this.usePassiveButton = new System.Windows.Forms.Button();
             this.passiveDetailsBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.loadPassiveButton);
             this.groupBox1.Controls.Add(this.usePassiveButton);
             this.groupBox1.Controls.Add(this.passiveDetailsBox);
             this.groupBox1.Controls.Add(this.label2);
@@ -60,17 +58,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Passive Selector";
-            // 
-            // loadPassiveButton
-            // 
-            this.loadPassiveButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loadPassiveButton.Location = new System.Drawing.Point(322, 98);
-            this.loadPassiveButton.Name = "loadPassiveButton";
-            this.loadPassiveButton.Size = new System.Drawing.Size(75, 23);
-            this.loadPassiveButton.TabIndex = 5;
-            this.loadPassiveButton.Text = "Load";
-            this.loadPassiveButton.UseVisualStyleBackColor = true;
-            this.loadPassiveButton.Click += new System.EventHandler(this.loadPassiveButton_Click);
             // 
             // usePassiveButton
             // 
@@ -118,6 +105,7 @@
             this.passiveSelectorBox.Name = "passiveSelectorBox";
             this.passiveSelectorBox.Size = new System.Drawing.Size(391, 19);
             this.passiveSelectorBox.TabIndex = 0;
+            this.passiveSelectorBox.SelectedIndexChanged += new System.EventHandler(this.passiveSelectorBox_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -127,20 +115,20 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Cyan;
             this.groupBox2.Location = new System.Drawing.Point(421, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(403, 517);
+            this.groupBox2.Size = new System.Drawing.Size(437, 517);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output";
             // 
             // passiveOutputBox
             // 
-            this.passiveOutputBox.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passiveOutputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passiveOutputBox.Location = new System.Drawing.Point(6, 19);
             this.passiveOutputBox.Multiline = true;
             this.passiveOutputBox.Name = "passiveOutputBox";
             this.passiveOutputBox.ReadOnly = true;
             this.passiveOutputBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.passiveOutputBox.Size = new System.Drawing.Size(391, 474);
+            this.passiveOutputBox.Size = new System.Drawing.Size(425, 474);
             this.passiveOutputBox.TabIndex = 0;
             // 
             // label13
@@ -149,7 +137,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("NSimSun", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Aqua;
-            this.label13.Location = new System.Drawing.Point(441, 532);
+            this.label13.Location = new System.Drawing.Point(471, 532);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(387, 27);
             this.label13.TabIndex = 4;
@@ -162,7 +150,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources.wallpapersden_com_ultra_goku_cool_2020_minimal_3840x2160;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(840, 564);
+            this.ClientSize = new System.Drawing.Size(870, 564);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -170,7 +158,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "UsePassive";
-            this.Text = "UsePassive";
+            this.Text = "Use Passive";
             this.Load += new System.EventHandler(this.UsePassive_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -191,7 +179,6 @@
         private System.Windows.Forms.ComboBox passiveSelectorBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox passiveOutputBox;
-        private System.Windows.Forms.Button loadPassiveButton;
         private System.Windows.Forms.Label label13;
     }
 }

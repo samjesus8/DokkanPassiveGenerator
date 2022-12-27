@@ -124,10 +124,13 @@
   <data name="goku-dragon-ball-super-ultra-instinct-b3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goku-dragon-ball-super-ultra-instinct-b3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wallpapersden.com_ultra-goku-cool-2020-minimal_3840x2160" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallpapersden.com_ultra-goku-cool-2020-minimal_3840x2160.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="4545965" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4545965.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wallpapersden.com_ultra-goku-cool-2020-minimal_3840x2160" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wallpapersden.com_ultra-goku-cool-2020-minimal_3840x2160.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4446869" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4446869.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

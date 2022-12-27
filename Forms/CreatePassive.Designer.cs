@@ -130,7 +130,7 @@
             // 
             // linkSelector
             // 
-            this.linkSelector.Font = new System.Drawing.Font("NSimSun", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkSelector.FormattingEnabled = true;
             this.linkSelector.Location = new System.Drawing.Point(195, 41);
             this.linkSelector.Name = "linkSelector";
@@ -163,6 +163,7 @@
             // 
             // rarityBox
             // 
+            this.rarityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rarityBox.FormattingEnabled = true;
             this.rarityBox.Items.AddRange(new object[] {
             "TUR",
@@ -171,7 +172,7 @@
             "LR (EZA)"});
             this.rarityBox.Location = new System.Drawing.Point(5, 84);
             this.rarityBox.Name = "rarityBox";
-            this.rarityBox.Size = new System.Drawing.Size(100, 19);
+            this.rarityBox.Size = new System.Drawing.Size(100, 21);
             this.rarityBox.TabIndex = 20;
             // 
             // label12
@@ -208,6 +209,7 @@
             // 
             // supportBox
             // 
+            this.supportBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supportBox.Location = new System.Drawing.Point(4, 412);
             this.supportBox.Name = "supportBox";
             this.supportBox.Size = new System.Drawing.Size(100, 20);
@@ -225,6 +227,7 @@
             // 
             // passiveDEFBox
             // 
+            this.passiveDEFBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passiveDEFBox.Location = new System.Drawing.Point(4, 364);
             this.passiveDEFBox.Name = "passiveDEFBox";
             this.passiveDEFBox.Size = new System.Drawing.Size(100, 20);
@@ -232,6 +235,7 @@
             // 
             // passiveATKBox
             // 
+            this.passiveATKBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passiveATKBox.Location = new System.Drawing.Point(4, 327);
             this.passiveATKBox.Name = "passiveATKBox";
             this.passiveATKBox.Size = new System.Drawing.Size(100, 20);
@@ -239,6 +243,7 @@
             // 
             // leaderBuffBox
             // 
+            this.leaderBuffBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leaderBuffBox.Location = new System.Drawing.Point(4, 290);
             this.leaderBuffBox.Name = "leaderBuffBox";
             this.leaderBuffBox.Size = new System.Drawing.Size(100, 20);
@@ -246,6 +251,7 @@
             // 
             // leaderNameBox
             // 
+            this.leaderNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leaderNameBox.Location = new System.Drawing.Point(4, 253);
             this.leaderNameBox.Name = "leaderNameBox";
             this.leaderNameBox.Size = new System.Drawing.Size(131, 20);
@@ -253,6 +259,7 @@
             // 
             // defBox
             // 
+            this.defBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defBox.Location = new System.Drawing.Point(4, 205);
             this.defBox.Name = "defBox";
             this.defBox.Size = new System.Drawing.Size(100, 20);
@@ -260,6 +267,7 @@
             // 
             // atkBox
             // 
+            this.atkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atkBox.Location = new System.Drawing.Point(5, 168);
             this.atkBox.Name = "atkBox";
             this.atkBox.Size = new System.Drawing.Size(100, 20);
@@ -267,6 +275,7 @@
             // 
             // hpBox
             // 
+            this.hpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hpBox.Location = new System.Drawing.Point(5, 131);
             this.hpBox.Name = "hpBox";
             this.hpBox.Size = new System.Drawing.Size(100, 20);
@@ -275,6 +284,7 @@
             // cardNameBox
             // 
             this.cardNameBox.BackColor = System.Drawing.SystemColors.Window;
+            this.cardNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardNameBox.Location = new System.Drawing.Point(5, 41);
             this.cardNameBox.Name = "cardNameBox";
             this.cardNameBox.Size = new System.Drawing.Size(131, 20);
@@ -402,6 +412,7 @@
             // outputBox
             // 
             this.outputBox.BackColor = System.Drawing.SystemColors.Control;
+            this.outputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputBox.Location = new System.Drawing.Point(6, 19);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
@@ -427,7 +438,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources._4545965;
+            this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources._4446869;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(822, 589);
             this.Controls.Add(this.label13);

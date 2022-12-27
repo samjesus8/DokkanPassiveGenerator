@@ -103,8 +103,8 @@
             double TotalATKGreat = step4 * (1 + Support + LinksATKMultiplier) * (1 + GreatRaise);
             double TotalATKMassive = step4 * (1 + Support + LinksATKMultiplier) * (1 + MassiveRaise);
 
-            string output = "ATK Stats \r\n\r\n" +
-                            "ATK Stat with NO Buffs - " + ATKBase.ToString("N0") + "\r\n" +
+            string output = "ATK Stats (Support/Links Individually Calculated) \r\n\r\n" +
+                            "ATK Stat (Base) - " + ATKBase.ToString("N0") + "\r\n" +
                             "ATK Stat with Support - " + ATKWithSupport.ToString("N0") + " (" + (Support * 100) + "% Support) \r\n" +
                             "ATK Stat with Links - " + ATKWithLinks.ToString("N0") + "\r\n\r\n" +
                             "Total ATK Stat (SUPPORT + LINKS) \r\n\r\n" +
@@ -180,18 +180,18 @@
             double TotalATKMassiveC = step4C * (1 + Support + LinksATKMultiplier) * (1 + MassiveRaise);
             double TotalATKMassiveMC = step4MC * (1 + Support + LinksATKMultiplier) * (1 + MassiveRaise);
 
-            string output = "ATK Stats \r\n\r\n" +
-                            "ATK Stat with NO Buffs (12 KI - Colossal) - " + ATKBaseC.ToString("N0") + "\r\n" +
-                            "ATK Stat with NO Buffs (24 KI - Mega-Colossal) - " + ATKBaseMC.ToString("N0") + "\r\n\r\n" +
+            string output = "ATK Stats (Support/Links Individually Calculated) \r\n\r\n" +
+                            "ATK Stat (Base 12 KI - Colossal) - " + ATKBaseC.ToString("N0") + "\r\n" +
+                            "ATK Stat (Base 24 KI - Mega-Colossal) - " + ATKBaseMC.ToString("N0") + "\r\n\r\n" +
                             "ATK Stat with Support (12 KI - Colossal) - " + ATKWithSupportC.ToString("N0") + " (" + (Support * 100) + "% Support) \r\n" +
-                            "ATK Stat with Support (24 KI - Mega-Colossal) - " + ATKWithSupportMC.ToString("N0") + " (" + (Support * 100) + "% Support) \r\n\r\n" +
+                            "ATK Stat with Support (24 KI - Mega-Colossal) - " + ATKWithSupportMC.ToString("N0") + "\r\n\r\n" +
                             "ATK Stat with Links (12 KI - Colossal) - " + ATKWithLinksC.ToString("N0") + "\r\n" +
                             "ATK Stat with Links (24 KI - Mega-Colossal) - " + ATKWithLinksMC.ToString("N0") + "\r\n\r\n" +
                             "TOTAL ATK STAT (SUPPORT + LINKS) \r\n\r\n" +
                             "Normal Raise (12 KI - Colossal) - " + TotalATKNormalC.ToString("N0") + "\r\n" +
-                            "Normal Raise (24 KI - Mega-Colossal) - " + TotalATKNormalMC.ToString("N0") + "\r\n" +
+                            "Normal Raise (24 KI - Mega-Colossal) - " + TotalATKNormalMC.ToString("N0") + "\r\n\r\n" +
                             "Great Raise (12 KI - Colossal) - " + TotalATKGreatC.ToString("N0") + "\r\n" +
-                            "Great Raise (24 KI - Mega-Colossal) - " + TotalATKGreatMC.ToString("N0") + "\r\n" +
+                            "Great Raise (24 KI - Mega-Colossal) - " + TotalATKGreatMC.ToString("N0") + "\r\n\r\n" +
                             "Massive Raise (12 KI - Colossal) - " + TotalATKMassiveC.ToString("N0") + "\r\n" +
                             "Massive Raise (24 KI - Mega-Colossal) - " + TotalATKMassiveMC.ToString("N0");
             return output;
@@ -238,11 +238,11 @@
             double GreatDEFRaise = GreatDEFTotal * (1 + GreatRaise);
             double MassiveDEFRaise = MassiveDEFTotal * (1 + MassiveRaise);
 
-            string output = "DEF Stats \r\n\r\n" +
+            string output = "DEF Stats (Support/Links Individually Calculated) \r\n\r\n" +
                             "DEF Pre Super - " + DEFPreSuper.ToString("N0") + "\r\n" +
-                            "DEF With Support - " + DEFSupport.ToString("N0") + " (" + (Support * 100) + "% Support) \r\n" +
-                            "DEF With Links - " + DEFLinks.ToString("N0") + "\r\n\r\n" +
-                            "DEF Stats on Super (SUPPORT + LINKS) \r\n\r\n" +
+                            "DEF With Support (Pre SA) - " + DEFSupport.ToString("N0") + " (" + (Support * 100) + "% Support) \r\n" +
+                            "DEF With Links (Pre SA) - " + DEFLinks.ToString("N0") + "\r\n\r\n" +
+                            "DEF Stats Post Super (SUPPORT + LINKS) \r\n\r\n" +
                             "Normal Raise (30%) - " + NormalDEFRaise.ToString("N0") + "\r\n" +
                             "Great Raise (50%) - " + GreatDEFRaise.ToString("N0") + "\r\n" +
                             "Massive Raise (100%) - " + MassiveDEFRaise.ToString("N0") + "\r\n";

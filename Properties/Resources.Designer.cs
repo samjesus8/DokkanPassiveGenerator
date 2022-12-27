@@ -63,6 +63,16 @@ namespace DokkanPassiveGenerator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4446869 {
+            get {
+                object obj = ResourceManager.GetObject("4446869", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4545965 {
             get {
                 object obj = ResourceManager.GetObject("4545965", resourceCulture);

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassiveManager));
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loadPassiveButton = new System.Windows.Forms.Button();
             this.passiveDetailsBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.loadPassiveButton);
             this.groupBox1.Controls.Add(this.passiveDetailsBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -77,17 +75,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Passive Selector";
-            // 
-            // loadPassiveButton
-            // 
-            this.loadPassiveButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loadPassiveButton.Location = new System.Drawing.Point(322, 55);
-            this.loadPassiveButton.Name = "loadPassiveButton";
-            this.loadPassiveButton.Size = new System.Drawing.Size(75, 23);
-            this.loadPassiveButton.TabIndex = 5;
-            this.loadPassiveButton.Text = "Load";
-            this.loadPassiveButton.UseVisualStyleBackColor = true;
-            this.loadPassiveButton.Click += new System.EventHandler(this.loadPassiveButton_Click);
             // 
             // passiveDetailsBox
             // 
@@ -124,6 +111,7 @@
             this.passiveSelectorBox.Name = "passiveSelectorBox";
             this.passiveSelectorBox.Size = new System.Drawing.Size(391, 19);
             this.passiveSelectorBox.TabIndex = 0;
+            this.passiveSelectorBox.SelectedIndexChanged += new System.EventHandler(this.passiveSelectorBox_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -242,7 +230,6 @@
 
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button loadPassiveButton;
         private System.Windows.Forms.TextBox passiveDetailsBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

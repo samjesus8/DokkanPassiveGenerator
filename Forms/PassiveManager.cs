@@ -13,31 +13,6 @@ namespace DokkanPassiveGenerator.Forms
             InitializeComponent();
         }
 
-        private void loadPassiveButton_Click(object sender, EventArgs e)
-        {
-            var nameToSearch = passiveSelectorBox.SelectedItem.ToString();
-            if (storage.Passives.ContainsKey(nameToSearch))
-            {
-                var tempSearch = storage.Passives.TryGetValue(nameToSearch, out var info);
-
-                string output = "Passive Details: \r\n\r\n" +
-                                "Card Name: " + info.CardName + "\r\n" +
-                                "Rarity: " + info.Rarity + "\r\n" +
-                                "HP: " + info.HP + "\r\n" +
-                                "ATK: " + info.ATK + "\r\n" +
-                                "DEF: " + info.DEF + "\r\n" +
-                                "Leader Name: " + info.LeaderSkillName + "\r\n" +
-                                "Leader Buff: " + info.LeaderSkillBuff + "\r\n" +
-                                "Passive ATK: " + info.PassiveATK + "\r\n" +
-                                "Passive DEF: " + info.PassiveDEF + "\r\n" +
-                                "Optional Buffs \r\n" +
-                                "Support: " + info.Support + "\r\n" +
-                                "Links: " + string.Join(", ", info.Links);
-
-                passiveDetailsBox.Text = output;
-            }
-        }
-
         private void PassiveManager_Load(object sender, EventArgs e)
         {
             //Loading passives
@@ -86,6 +61,31 @@ namespace DokkanPassiveGenerator.Forms
 
             var passives = new PassiveCreator();
             passives.DeletePassive(passiveToDelete);
+        }
+
+        private void passiveSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var nameToSearch = passiveSelectorBox.SelectedItem.ToString();
+            if (storage.Passives.ContainsKey(nameToSearch))
+            {
+                var tempSearch = storage.Passives.TryGetValue(nameToSearch, out var info);
+
+                string output = "Passive Details: \r\n\r\n" +
+                                "Card Name: " + info.CardName + "\r\n" +
+                                "Rarity: " + info.Rarity + "\r\n" +
+                                "HP: " + info.HP + "\r\n" +
+                                "ATK: " + info.ATK + "\r\n" +
+                                "DEF: " + info.DEF + "\r\n" +
+                                "Leader Name: " + info.LeaderSkillName + "\r\n" +
+                                "Leader Buff: " + info.LeaderSkillBuff + "\r\n" +
+                                "Passive ATK: " + info.PassiveATK + "\r\n" +
+                                "Passive DEF: " + info.PassiveDEF + "\r\n" +
+                                "Optional Buffs \r\n" +
+                                "Support: " + info.Support + "\r\n" +
+                                "Links: " + string.Join(", ", info.Links);
+
+                passiveDetailsBox.Text = output;
+            }
         }
     }
 }

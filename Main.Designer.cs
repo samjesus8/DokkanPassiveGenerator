@@ -34,6 +34,7 @@
             this.usePassiveButton = new System.Windows.Forms.Button();
             this.managePassiveButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +108,18 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Copyright ©SamuelJesuthas";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("NSimSun", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "V1.0.1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +128,7 @@
             this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources.goku_dragon_ball_super_ultra_instinct_b3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.managePassiveButton);
             this.Controls.Add(this.usePassiveButton);
@@ -124,6 +138,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Dokkan Passive Generator";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
@@ -138,6 +153,7 @@
         private System.Windows.Forms.Button usePassiveButton;
         private System.Windows.Forms.Button managePassiveButton;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
     }
 }
 

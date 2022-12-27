@@ -39,6 +39,9 @@ namespace DokkanPassiveGenerator
             {
                 LoadFiles();
             }
+
+            var changelog = new Changelog();
+            changelog.Show();
         }
 
         private string LoadFiles() 

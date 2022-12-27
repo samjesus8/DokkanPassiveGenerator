@@ -21,8 +21,10 @@ namespace DokkanPassiveGenerator.Forms
 
             var calculator = new Calculator(info.Rarity, info.HP, info.ATK, info.DEF, info.LeaderSkillBuff, info.PassiveATK, info.PassiveDEF, info.Support, info.Links);
 
-            string output = "Stats for unit " + info.CardName + "\r\n\r\n" +
+            string output = "Stats for unit " + info.CardName + "\r\n" +
+                            "========================================================= \r\n\r\n" +
                             calculator.ResultATK + "\r\n\r\n" +
+                            "========================================================= \r\n\r\n" +
                             calculator.ResultDEF;
 
             passiveOutputBox.Text = output;
@@ -47,10 +49,10 @@ namespace DokkanPassiveGenerator.Forms
             }
         }
 
-        private void loadPassiveButton_Click(object sender, EventArgs e)
+        private void passiveSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var nameToSearch = passiveSelectorBox.SelectedItem.ToString();
-            if (storage.Passives.ContainsKey(nameToSearch)) 
+            if (storage.Passives.ContainsKey(nameToSearch))
             {
                 var tempSearch = storage.Passives.TryGetValue(nameToSearch, out var info);
 
