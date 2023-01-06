@@ -100,6 +100,7 @@
             // 
             // passiveSelectorBox
             // 
+            this.passiveSelectorBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.passiveSelectorBox.FormattingEnabled = true;
             this.passiveSelectorBox.Location = new System.Drawing.Point(6, 71);
             this.passiveSelectorBox.Name = "passiveSelectorBox";

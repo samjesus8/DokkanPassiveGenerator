@@ -35,6 +35,7 @@
             this.managePassiveButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.changelogButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,7 +119,20 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 15);
             this.label2.TabIndex = 5;
-            this.label2.Text = "V1.0.1";
+            this.label2.Text = "V1.0.2";
+            // 
+            // changelogButton
+            // 
+            this.changelogButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.changelogButton.Font = new System.Drawing.Font("NSimSun", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changelogButton.ForeColor = System.Drawing.Color.Transparent;
+            this.changelogButton.Location = new System.Drawing.Point(79, 337);
+            this.changelogButton.Name = "changelogButton";
+            this.changelogButton.Size = new System.Drawing.Size(75, 23);
+            this.changelogButton.TabIndex = 6;
+            this.changelogButton.Text = "Changelog";
+            this.changelogButton.UseVisualStyleBackColor = false;
+            this.changelogButton.Click += new System.EventHandler(this.changelogButton_Click);
             // 
             // Main
             // 
@@ -128,6 +142,7 @@
             this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources.goku_dragon_ball_super_ultra_instinct_b3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.changelogButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.managePassiveButton);
@@ -154,6 +169,7 @@
         private System.Windows.Forms.Button managePassiveButton;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button changelogButton;
     }
 }
 

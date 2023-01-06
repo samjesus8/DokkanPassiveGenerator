@@ -89,7 +89,11 @@ namespace DokkanPassiveGenerator.Forms
                 if (storeProcess == true)
                 {
                     //Success Message
-                    MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Successfully stored Passive!!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Clear all inputs
+                    ClearAllInputs();
+                    outputBox.Clear();
                 }
                 else
                 {
@@ -143,6 +147,20 @@ namespace DokkanPassiveGenerator.Forms
             }
 
             return true;
+        }
+        private void ClearAllInputs() 
+        {
+            cardNameBox.Clear();
+            rarityBox.ResetText();
+            hpBox.Clear();
+            defBox.Clear();
+            atkBox.Clear();
+            leaderNameBox.Clear();
+            leaderBuffBox.Clear();
+            passiveATKBox.Clear();
+            passiveDEFBox.Clear();
+            supportBox.Clear();
+            linkSelector.ClearSelected();
         }
     }
 }

@@ -59,5 +59,11 @@ namespace DokkanPassiveGenerator
 
             return docsLocation;
         }
+
+        private void changelogButton_Click(object sender, EventArgs e)
+        {
+            var changelog = new Changelog();
+            changelog.Show();
+        }
     }
 }

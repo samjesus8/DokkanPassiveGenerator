@@ -60,7 +60,18 @@ namespace DokkanPassiveGenerator.Forms
             var tempSearch = storage.Passives.TryGetValue(nameToSearch, out var passiveToDelete);
 
             var passives = new PassiveCreator();
-            passives.DeletePassive(passiveToDelete);
+            bool deleteProcess = passives.DeletePassive(passiveToDelete);
+
+            if (deleteProcess == true) 
+            {
+                MessageBox.Show("Successfully Deleted Passive!!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else 
+            {
+                string errorMsg = "Something went wrong \r\n" +
+                                  "Error: " + passives.Error;
+                MessageBox.Show(errorMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void passiveSelectorBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -106,6 +106,7 @@
             // 
             // passiveSelectorBox
             // 
+            this.passiveSelectorBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.passiveSelectorBox.FormattingEnabled = true;
             this.passiveSelectorBox.Location = new System.Drawing.Point(6, 30);
             this.passiveSelectorBox.Name = "passiveSelectorBox";
@@ -134,6 +135,7 @@
             this.linksOutputBox.Location = new System.Drawing.Point(6, 90);
             this.linksOutputBox.Multiline = true;
             this.linksOutputBox.Name = "linksOutputBox";
+            this.linksOutputBox.ReadOnly = true;
             this.linksOutputBox.Size = new System.Drawing.Size(391, 192);
             this.linksOutputBox.TabIndex = 3;
             // 
@@ -157,6 +159,7 @@
             // 
             // linkSelector
             // 
+            this.linkSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.linkSelector.FormattingEnabled = true;
             this.linkSelector.Location = new System.Drawing.Point(6, 35);
             this.linkSelector.Name = "linkSelector";
@@ -174,7 +177,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Cyan;
             this.groupBox3.Location = new System.Drawing.Point(421, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(403, 293);
+            this.groupBox3.Size = new System.Drawing.Size(403, 101);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Delete Passives";
@@ -192,6 +195,7 @@
             // 
             // deletePassiveBox
             // 
+            this.deletePassiveBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.deletePassiveBox.FormattingEnabled = true;
             this.deletePassiveBox.Location = new System.Drawing.Point(6, 30);
             this.deletePassiveBox.Name = "deletePassiveBox";
@@ -203,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources.goku_dragon_ball_super_ultra_instinct_b3;
+            this.BackgroundImage = global::DokkanPassiveGenerator.Properties.Resources.wallpapersden_com_ultra_goku_cool_2020_minimal_3840x2160;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(836, 612);
             this.Controls.Add(this.groupBox3);
