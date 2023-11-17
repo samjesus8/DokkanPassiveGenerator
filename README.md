@@ -1,5 +1,10 @@
 # Dokkan Passive Generator - By Sam J
 
+## IMPORTANT
+
+- This application is now discontinued and the repository will be archived
+- We will be moving to a web-based generator and mobile app which does the same functionality as this application
+
 ## About
 This Windows Application is an extension of the "Cooler" Discord Bot's Slash commands. It uses the same design but in a Windows Forms application format and not the Discord Slash commands which means it'll be more efficient than using the Discord Bot.
 
